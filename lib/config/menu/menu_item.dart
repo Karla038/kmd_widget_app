@@ -12,8 +12,9 @@ class MenuItem {
     required this.link, 
     required this.icon
   });
+}
 
-   const appMenuItems = <MenuItem>[
+ const appMenuItems = <MenuItem>[
     MenuItem(
       title: 'Botones', 
       subtitle: 'Varios botones en flutter', 
@@ -29,7 +30,3 @@ class MenuItem {
     ),
 
   ];
-
- 
-
-}
