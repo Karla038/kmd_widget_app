@@ -3,19 +3,23 @@ import '../../presentation/screens/screens.dart';
 
 
 final appRouter = GoRouter(
-  initialLocation: '/buttons',
+  initialLocation: '/',
   routes: [
     GoRoute(
       path: '/',
       builder: (context, state) => const HomeScreen(),
     ),
     GoRoute(
-      path: '/',
+      path: '/buttons',
       builder: (context, state) => const ButtonsScreen(),
     ),
     GoRoute(
-      path: '/',
+      path: '/cards',
       builder: (context, state) => const CardsScreen(),
+    ),
+    GoRoute(
+      path: '/progress',
+      builder: (context, state) => const ProgressScreen(),
     )
 
   ]
