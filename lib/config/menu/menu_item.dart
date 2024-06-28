@@ -36,4 +36,11 @@ class MenuItem {
       icon: Icons.refresh_outlined
     ),
 
+     MenuItem(
+      title: 'Snackbars y dialogos', 
+      subtitle: 'Indicadores en pantalla', 
+      link: '/snackbar', 
+      icon: Icons.message_outlined
+    ),
+
   ];
