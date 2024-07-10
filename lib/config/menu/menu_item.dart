@@ -50,4 +50,11 @@ class MenuItem {
       icon: Icons.animation
     ),
 
+    MenuItem(
+      title: 'UI Controls + Tiles', 
+      subtitle: 'Controles en Flutter', 
+      link: '/ui-controls', 
+      icon: Icons.add_circle_outline_sharp
+    ),
+
   ];
