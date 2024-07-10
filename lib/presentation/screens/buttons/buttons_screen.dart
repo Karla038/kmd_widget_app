@@ -4,11 +4,17 @@ import 'package:go_router/go_router.dart';
 class ButtonsScreen extends StatelessWidget {
   const ButtonsScreen({super.key});
 
+  static const String name = "buttons_screen";
+
+
   @override
   Widget build(BuildContext context) {
+    
+    final colors = Theme.of(context).colorScheme;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Botones'),
+        title: const Text('Buttons Screen'),
       ),
       body: const _ButtonsView(),
       floatingActionButton: FloatingActionButton(
@@ -37,7 +43,7 @@ class _ButtonsView extends StatelessWidget {
 
             ElevatedButton.icon(
               onPressed: (){}, 
-              icon: const Icon(Icons.heart_broken),
+              icon: const Icon(Icons.access_alarm_outlined),
               label: const Text('Elevated Icon')
             ),
 
@@ -45,38 +51,62 @@ class _ButtonsView extends StatelessWidget {
             
             FilledButton.icon(
               onPressed: (){}, 
-              icon: const Icon(Icons.heart_broken),
-              label: const Text('Elevated Icon')
+              icon: const Icon(Icons.add_road_sharp),
+              label: const Text('Filled Icon')
             ),
 
             OutlinedButton(onPressed: (){}, child: const Text('Outlined Button')),
             OutlinedButton.icon(
               onPressed: (){}, 
-              icon: const Icon(Icons.heart_broken),
-              label: const Text('Elevated Icon')
+              icon: const Icon(Icons.airline_seat_recline_extra_sharp),
+              label: const Text('Outlined Icon')
             ),
 
             TextButton(onPressed: (){}, child: const Text('Text Button')),
             
             TextButton.icon(
               onPressed: (){}, 
-              icon: const Icon(Icons.heart_broken),
+              icon: const Icon(Icons.nature_people_outlined),
               label: const Text('Text Icon')
             ),
 
-            // IconButton(onPressed: (){}, icon: const Text('Text Button')),
+            IconButton(onPressed: (){}, icon: const Icon(Icons.heart_broken_outlined)),
             
-            // IconButton.icon(
+            // IconButton(
             //   onPressed: (){}, 
-            //   icon: const Icon(Icons.heart_broken),
+            //   icon: const Icon(Icons.volume_off_outlined),
             //   style: const ButtonStyle(
-            //     backgroundColor: WidgetStatePropertyAll(),
-            //     iconColor: WidgetStatePropertyAll(Colors.white),
+            //     backgroundColor: WidgetStatePropertyAll(colors.primary),
+            //     iconColor: const WidgetStatePropertyAll(Colors.white),
             //   ),
             //   label: const Text('Text Icon')
             // ),
 
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class CustomButton extends StatelessWidget {
+  const CustomButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    
+    final colors = Theme.of(context).colorScheme;
+
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: Material(
+        color: colors.primary,
+        child: InkWell(
+          onTap: () { },
+          child: const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: Text('Personalized Button', style: TextStyle(color: Colors.white)),
+          ),
         ),
       ),
     );

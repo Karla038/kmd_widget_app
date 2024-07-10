@@ -5,7 +5,9 @@ const colorList = <Color>[
   Colors.red,
   Colors.orange,
   Colors.yellow,
-  Colors.deepPurpleAccent
+  Colors.deepPurpleAccent,
+  Colors.greenAccent
+
 ];
 
 class AppTheme {
@@ -13,7 +15,7 @@ class AppTheme {
   final int selectedColor;
 
   AppTheme({
-    required this.selectedColor
+    this.selectedColor = 0
     }): assert (
       selectedColor >= 0, 'Selecciona un color mayor a 0 '
     ),
