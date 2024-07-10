@@ -57,4 +57,11 @@ class MenuItem {
       icon: Icons.add_circle_outline_sharp
     ),
 
+    MenuItem(
+      title: 'Introduccion a la aplicacion', 
+      subtitle: 'Tutorial introductorio', 
+      link: '/tutorial', 
+      icon: Icons.accessibility_outlined
+    ),
+
   ];
